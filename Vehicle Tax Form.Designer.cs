@@ -92,6 +92,7 @@ namespace 使用牌照稅應納稅額試算
             // 
             // conbo2CC
             // 
+            this.conbo2CC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.conbo2CC.FormattingEnabled = true;
             this.conbo2CC.Location = new System.Drawing.Point(229, 192);
             this.conbo2CC.Name = "conbo2CC";
@@ -101,6 +102,7 @@ namespace 使用牌照稅應納稅額試算
             // 
             // Conbo1purp
             // 
+            this.Conbo1purp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Conbo1purp.FormattingEnabled = true;
             this.Conbo1purp.Items.AddRange(new object[] {
             "機車",

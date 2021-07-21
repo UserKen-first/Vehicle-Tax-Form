@@ -49,6 +49,7 @@ namespace 使用牌照稅應納稅額試算
                 }
             }
             this.dateTimePicker2To.MinDate = DateTime.Now;
+
         }
         #endregion
         #region 使用期間按鈕設定
@@ -209,7 +210,7 @@ namespace 使用牌照稅應納稅額試算
             Unit();
             txtBoxShowRes.Visible = false;
             lblhint.Visible = true;
-            conbo2CC.Text = "";
+            conbo2CC.SelectedIndex = -1;
         }
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -362,19 +363,21 @@ namespace 使用牌照稅應納稅額試算
         {
             System.Diagnostics.Process.Start("https://law-out.mof.gov.tw/LawContent.aspx?id=FL006130");
         }
+        //汽缸CC數／馬達馬力選單設定
         private void conbo2CC_SelectedIndexChanged(object sender, EventArgs e)
         {
             int b = conbo2CC.SelectedIndex;
-            if(b == -1)
+            if (b == -1)
             {
                 btnconfirm.Enabled = false;
             }
-            else if(b != -1)
+            else if (b != -1)
             {
                 btnconfirm.Enabled = true;
                 lblhint.Visible = false;
             }
         }
+        //設定結束日期的最小日為開始日期
         private void dateTimePicker1From_ValueChanged(object sender, EventArgs e)
         {
             dateTimePicker2To.MinDate = dateTimePicker1From.Value;
